@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-
+const baseUrl="https://carpredictapi.onrender.com"
 export default function Signup() {
     const [formData,setFormData]=useState({})
     const [post,setPost]=useState([])
@@ -18,7 +18,7 @@ export default function Signup() {
           
           alert('Invalid Admin')
         }else{
-        fetch("http://localhost:5000/register", {
+        fetch(`${baseUrl}/register`, {
         method: "POST",
         crossDomain: true,
         headers: {

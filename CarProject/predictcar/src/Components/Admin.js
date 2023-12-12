@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-
+const baseUrl="https://carpredictapi.onrender.com"
 function Admin() {
   const [alluser,setAlluser]=useState([])
   const [restart,setRestart]=useState('')
   // using useEffect  to fetch data of car delar who is signup in database when ever restart usestate is change
   useEffect(()=>{
-    fetch("http://localhost:5000/admin", {
+    fetch(`${baseUrl}/admin` , {
         method: "POST",
         crossDomain: true,
         headers: {

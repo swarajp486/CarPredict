@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+const baseUrl="https://carpredictapi.onrender.com"
 export default function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({});
@@ -29,7 +29,7 @@ export default function Login() {
   const handleSumbit = (e) => {
     //console.log("e", e);
     e.preventDefault();
-    fetch("http://localhost:5000/loginuser", {
+    fetch(`${baseUrl}/loginuser`, {
       method: "POST",
       crossDomain: true,
       headers: {
