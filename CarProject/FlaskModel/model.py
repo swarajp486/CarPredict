@@ -11,3 +11,4 @@ def knn(age, salary):
 
     return (prediction, model.predict_proba(data_point))
 
+print(knn(22,40000))
