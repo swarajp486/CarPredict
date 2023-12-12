@@ -8,6 +8,7 @@ app.use(express.json())
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 const JWT_SECRET="sakdffjewofjwe"
+const port=process.env.PORT ||6000
 
 const MONGODB="mongodb+srv://swarajp486:Lecun@cluster0.c4lhbbx.mongodb.net/"
 
@@ -20,8 +21,8 @@ mongoose
   .catch((e)=>console.log(e));
 
 
-app.listen(5000,()=>{
-    console.log(`Server started at http://localhost:${5000}`)
+app.listen(port,()=>{
+    console.log(`Server started at http://localhost:${port}`)
 })
 
 app.post("/post",async (req,res) =>{

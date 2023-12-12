@@ -16,7 +16,7 @@ export default function Predict() {
     const handleSumbit=async (e)=>{
         e.preventDefault()
         //console.log(formData)
-        await fetch("http://127.0.0.1:5001/predict", {
+        await fetch("https://flask-idpn.onrender.com/predict", {
         method: "POST",
         crossDomain: true,
         headers: {
