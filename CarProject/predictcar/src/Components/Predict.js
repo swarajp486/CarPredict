@@ -13,10 +13,10 @@ export default function Predict() {
     }
 
     // while submit button click handlesumbit function will call and it request flask api by passing a data and wait for response
-    const handleSumbit=(e)=>{
+    const handleSumbit=async (e)=>{
         e.preventDefault()
         //console.log(formData)
-        fetch("http://127.0.0.1:5001/predict", {
+        await fetch("http://127.0.0.1:5001/predict", {
         method: "POST",
         crossDomain: true,
         headers: {

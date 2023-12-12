@@ -1,3 +1,4 @@
+
 const express =require('express')
 const app=express()
 const mongoose=require('mongoose')
@@ -8,7 +9,7 @@ const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 const JWT_SECRET="sakdffjewofjwe"
 
-const MONGODB="mongodb+srv://swarajpal:LeCun@cluster0.fvp3lok.mongodb.net/"
+const MONGODB="mongodb+srv://swarajp486:Lecun@cluster0.c4lhbbx.mongodb.net/"
 
 mongoose
   .connect(MONGODB, { useNewUrlParser: true })
